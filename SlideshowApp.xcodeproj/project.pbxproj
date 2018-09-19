@@ -14,6 +14,7 @@
 		D6245341214F79C500E73033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D624533F214F79C500E73033 /* LaunchScreen.storyboard */; };
 		D624534C214F79C600E73033 /* SlideshowAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624534B214F79C600E73033 /* SlideshowAppTests.swift */; };
 		D6245357214F79C600E73033 /* SlideshowAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6245356214F79C600E73033 /* SlideshowAppUITests.swift */; };
+		D6245367214F86B000E73033 /* BigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6245366214F86B000E73033 /* BigImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D6245352214F79C600E73033 /* SlideshowAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideshowAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6245356214F79C600E73033 /* SlideshowAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideshowAppUITests.swift; sourceTree = "<group>"; };
 		D6245358214F79C600E73033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6245366214F86B000E73033 /* BigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				D624533D214F79C500E73033 /* Assets.xcassets */,
 				D624533F214F79C500E73033 /* LaunchScreen.storyboard */,
 				D6245342214F79C500E73033 /* Info.plist */,
+				D6245366214F86B000E73033 /* BigImageViewController.swift */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6245339214F79C500E73033 /* ViewController.swift in Sources */,
+				D6245367214F86B000E73033 /* BigImageViewController.swift in Sources */,
 				D6245337214F79C500E73033 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
