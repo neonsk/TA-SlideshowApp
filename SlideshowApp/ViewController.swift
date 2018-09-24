@@ -20,15 +20,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextImage: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var imageTop: UIImageView!
-    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var nextStopImage: UIImageView!
+    @IBOutlet weak var backStopImage: UIImageView!
+    @IBOutlet weak var slideShowButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         for i in 1...imageSum {
-            imageArray.append(UIImage(named: "image\(i)")!)
+            imageArray.append(UIImage(named: "image\(i).jpg")!)
         }
-        imageTop.image = UIImage(named: "image1")!
-        //nextImage.image = UIImage(named: "next")!
-        //backImage.image = UIImage(named: "back")!
+        imageTop.image = UIImage(named: "image1.jpg")!
+        slideShowButton.setTitle("再生", for: .normal)
+        nextImage.image = UIImage(named: "next.jpg")!
+        backImage.image = UIImage(named: "back.jpg")!
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,11 +67,21 @@ class ViewController: UIViewController {
     //再生/停止の設定===================================================
     @IBAction func slideshow(_ sender: Any) {
         if timeActive == "stop" {
+            slideShowButton.setTitle("停止", for: .normal)
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideImage(_:)), userInfo: nil, repeats: true)
             timeActive = "active"
+            nextStopImage.image = UIImage(named: "notAvailable.png")!
+            backStopImage.image = UIImage(named: "notAvailable.png")!
+            nextButton.isEnabled = false
+            backButton.isEnabled = false
         }else if timeActive == "active"{
+            slideShowButton.setTitle("再生", for: .normal)
             self.timer.invalidate()
             timeActive="stop"
+            nextStopImage.removeFromSuperview()
+            backStopImage.removeFromSuperview()
+            nextButton.isEnabled = true
+            backButton.isEnabled = true
         }
         
     }
@@ -81,7 +97,10 @@ class ViewController: UIViewController {
     //画面推移===================================================
     @IBAction func nextPage(_ sender: Any) {
         if timeActive == "active" {
+            slideShowButton.setTitle("再生", for: .normal)
             self.timer.invalidate()
+            nextStopImage.removeFromSuperview()
+            backStopImage.removeFromSuperview()
         }
         timeActive="stop"
     }
