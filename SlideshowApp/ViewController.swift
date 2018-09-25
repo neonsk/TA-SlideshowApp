@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var imageNow = 0
     var timer : Timer!
     var timeActive : String = "stop"
+    
     @IBOutlet weak var nextImage: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var imageTop: UIImageView!
@@ -78,8 +79,8 @@ class ViewController: UIViewController {
             slideShowButton.setTitle("再生", for: .normal)
             self.timer.invalidate()
             timeActive="stop"
-            nextStopImage.removeFromSuperview()
-            backStopImage.removeFromSuperview()
+            nextStopImage.image = nil
+            backStopImage.image = nil
             nextButton.isEnabled = true
             backButton.isEnabled = true
         }
@@ -99,8 +100,10 @@ class ViewController: UIViewController {
         if timeActive == "active" {
             slideShowButton.setTitle("再生", for: .normal)
             self.timer.invalidate()
-            nextStopImage.removeFromSuperview()
-            backStopImage.removeFromSuperview()
+            nextStopImage.image = nil
+            backStopImage.image = nil
+            nextButton.isEnabled = true
+            backButton.isEnabled = true
         }
         timeActive="stop"
     }

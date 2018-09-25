@@ -21,7 +21,7 @@ class BigImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageTopBig.image = UIImage(named: "image\(imgNow)")!
+        imageTopBig.image = UIImage(named: "image\(imgNow).jpg")!
     
         /* screenWidth = self.imageTopBig.bounds.width
         screenHeight = self.imageTopBig.bounds.height

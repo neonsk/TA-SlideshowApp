@@ -137,11 +137,11 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="72F-XR-Da6" id="E8X-vQ-Zlb"/>
-                        <outlet property="backImage" destination="wsB-q0-KNf" id="aR0-Vv-nmt"/>
+                        <outlet property="backImage" destination="wsB-q0-KNf" id="m5e-Wa-m50"/>
                         <outlet property="backStopImage" destination="3XH-TD-1j8" id="yPD-1P-njA"/>
                         <outlet property="imageTop" destination="OFe-Hk-imu" id="CZa-Qr-iNU"/>
                         <outlet property="nextButton" destination="qlk-zw-0ae" id="KdM-0e-awB"/>
-                        <outlet property="nextImage" destination="cEN-hT-BGJ" id="fHw-Cr-O4y"/>
+                        <outlet property="nextImage" destination="cEN-hT-BGJ" id="z0z-Ir-m3p"/>
                         <outlet property="nextStopImage" destination="196-3Z-XxT" id="lSI-IR-N4m"/>
                         <outlet property="slideShowButton" destination="gkw-3R-kpr" id="NxD-l7-cuc"/>
                     </connections>
